@@ -1,10 +1,70 @@
 /*  *.* BODY AND HTML
-
+    size, colors, font
 */
 
-/* size and colors.*/
 body{
     width: 700px;
     height: 500px;
+
     background-color: #78CAD6;
+
+    font-family: "Work Sans", sans-serif;
+    font-weight: 400;
+    font-size: 36px;
+}
+
+/*  *.* BACKGROUND SHAPES
+    buttons and text backings/style
+*/
+.background-shape{
+    border-radius: 50px;
+}
+
+/* text and box styling and positions*/
+.hello{
+    background-color: #2E5266;
+    position: absolute;
+    left: 140px;
+    top: 15px;
+    width: 420px;
+    height: 60px;
+}
+.mode{
+    background-color: #D1ECF0;
+    position: absolute;
+    left: 209px;
+    top: 424px;
+    width: 282px;
+    height: 45px;
+}
+
+/* timer button styling and positions (+ text styles)*/
+.timer-button{
+    font-family: "Work Sans", sans-serif;
+    background-color: #D1ECF0;
+    color: #2E5266;
+    font-size: 13px;
+    font-weight: 600;
+    border: none;
+}
+.start{
+    position: absolute;
+    left: 288px;
+    top: 126px;
+    width: 57px;
+    height: 32px;
+}
+.end{
+    position: absolute;
+    left: 355px;
+    top: 126px;
+    width: 57px;
+    height: 32px;
+}
+
+/*  *.* TEXT
+    text styles and positions
+ */
+.time-display{
+
 }
