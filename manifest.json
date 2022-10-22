@@ -1,0 +1,19 @@
+{
+  "name": "Axo-Life",
+  "description": "Make an axolotl friend for life!",
+  "version": "1.0",
+  "author": "Michelle Arquiza",
+  "manifest_version": 3,
+  "icons": {
+    "16": "/images/axo-16.png",
+    "48": "/images/axo-48.png",
+    "128": "/images/axo-128.png"
+  },
+  "permissions": [
+    "storage"
+  ],
+  "action":{
+    "default_popup": "index.html",
+    "default_title": "axo-life"
+  }
+}
