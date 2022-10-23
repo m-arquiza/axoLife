@@ -8,7 +8,6 @@ let timeLength = 1500;
 /*  *.* TIMER FUNCTIONS
     timer set, start and end buttons
 */
-
 /* variable function to set timer.*/
 setInterval(function() {
     if(timerOn === true) {
@@ -18,12 +17,12 @@ setInterval(function() {
         let diff = timeSet - now;
 
         // display time
-        document.getElementById("time-display").innerHTML = milliseconds_toString(diff)
+        document.getElementsByClassName("time")[0].innerHTML = milliseconds_toString(diff)
 
         // end timer
         if (diff < 0) {
             clearInterval();
-            document.getElementById("time-display").innerHTML = milliseconds_toString(timeLength * 1000);
+            document.getElementsByClassName("time")[0].innerHTML = milliseconds_toString(timeLength * 1000);
             timerOn = false;
             localStorage.clear();
         }
@@ -42,26 +41,26 @@ document.getElementsByClassName("end")[0].addEventListener("click", function(){
     localStorage.clear();
     timerOn = false;
 
-    document.getElementById("time-display").innerHTML = milliseconds_toString(timeLength * 1000);
+    document.getElementsByClassName("time")[0].innerHTML = milliseconds_toString(timeLength * 1000);
 });
+
+
+
 /*  *.* SPACER TITLE
     gen title
 */
-
 /* indiv title.*/
 
 
 /*  *.* SPACER TITLE
     gen title
 */
-
 /* indiv title.*/
 
 
 /*  *.* HELPER FUNCTIONS
     time conversion
 */
-
 /* convert milliseconds to mins and seconds as a formatted string.*/
 function milliseconds_toString(time){
     return (Math.floor((time/1000)/60) + ":" + Math.floor((time/1000)%60).toLocaleString(undefined,{minimumIntegerDigits: 2}))
