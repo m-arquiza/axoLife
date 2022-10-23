@@ -36,14 +36,14 @@
 
     <div id="mode">
         <div class="background-shape mode"></div>
-        <h2 class="mode-text">welcome back!</h2>
+        <h2 class="mode-text">welcome back~</h2>
     </div>
 
     <div id="navigation">
         <img src="images/nav-icons/home-nav.png" alt="sidebar home button" class="nav home-button" />
         <img src="images/nav-icons/study-nav.png" alt="sidebar study button" class="nav study-button" />
         <img src="images/nav-icons/nom-nav.png" alt="sidebar nom button" class="nav nom-button" />
-        <img src="images/nav-icons/study-nav.png" alt="sidebar nap button" class="nav nap-button" />
+        <img src="images/nav-icons/nap-nav.png" alt="sidebar nap button" class="nav nap-button" />
     </div>
 
     <div id="initial-popup">
@@ -59,13 +59,27 @@
 
     <div id="settings-popup">
         <div id="settings-form">
+            <div id="settings-close">X</div>
             <div id="settings-rename">
+                <h1 class="settings-title rename">name change</h1>
                 <label for="rename-value" id="rename-label">please input your name:</label>
                 <div id="rename-submit-container">
                     <input type="text" id="rename-value" name="rename" placeholder="12 characters max!">
                     <button id="rename-submit">go!</button>
                 </div>
                 <p class="error settingsPop">invalid; please try again (maybe a nickname?)</p>
+            </div>
+            <div id="settings-time-change">
+                <h1 class="settings-title time-change">timer change</h1>
+
+                <label for="minute-value" id="minute-label">minutes:</label>
+                <input type="text" id="minute-value" name="minute" placeholder="25">
+
+                <label for="seconds-value" id="seconds-label">seconds:</label>
+                <input type="text" id="seconds-value" name="seconds" placeholder="00">
+
+                <button id="time-change-submit">go!</button>
+                <!--<p class="error settingsPop">numbers only allowed</p>-->
             </div>
         </div>
     </div>

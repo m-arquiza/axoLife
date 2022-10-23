@@ -234,6 +234,7 @@ body{
 /*  *.* POPUPS
     initial name and settings
  */
+
 #initial-popup{
     background-color: #78CAD6;
     cursor:default;
@@ -278,7 +279,6 @@ body{
     font-weight: 400;
     width: 230px;
 }
-
 #name-submit{
     font-family: "Work Sans", sans-serif;
     background-color: #FFC2E1;
@@ -294,8 +294,8 @@ body{
     color: #D1ECF0;
     font-size: 14px;
     font-weight: 400;
-    position:relative;
-    top: 50px;
+    position:absolute;
+    top: 80px;
     left: 20px;
     display:none;
 }
@@ -331,30 +331,48 @@ body{
     border-radius: 50px;
 }
 
+.settings-title{
+    font-family: "Work Sans", sans-serif;
+    color: #D1ECF0;
+    font-size: 30px;
+    font-weight: 600;
+    border: none;
+}
+.rename{
+    position: absolute;
+    top: 0;
+    left: 20px;
+}
+
+.time-change{
+    position: absolute;
+    top: 110px;
+    left: 20px;
+}
+
+
 #rename-label{
-    position:relative;
-    top: 10px;
+    position:absolute;
+    top: 52px;
     left:20px;
 
     font-family: "Work Sans", sans-serif;
-    color: #D1ECF0;
-    font-size: 25px;
+    color: #ABE0FF;
+    font-size: 20px;
     font-weight: 500;
     border: none;
 }
 #rename-submit-container{
     position:absolute;
-    top: 50px;
+    top: 60px;
     left: 20px
 }
-
 #rename-value{
     font-family: "Work Sans", sans-serif;
     color: #457058;
     font-weight: 400;
     width: 230px;
 }
-
 #rename-submit{
     font-family: "Work Sans", sans-serif;
     background-color: #FFC2E1;
@@ -364,4 +382,74 @@ body{
     border: none;
     border-radius: 50px;
     height: 25px;
+}
+
+#minute-label{
+    position:absolute;
+    top: 162px;
+    left:20px;
+
+    font-family: "Work Sans", sans-serif;
+    color: #ABE0FF;
+    font-size: 20px;
+    font-weight: 500;
+    border: none;
+}
+#minute-value{
+    font-family: "Work Sans", sans-serif;
+    color: #457058;
+    font-weight: 400;
+    width: 230px;
+
+    position:absolute;
+    top: 185px;
+    left: 20px
+}
+
+#seconds-label{
+    position:relative;
+    top: 192px;
+    left: 20px;
+
+    font-family: "Work Sans", sans-serif;
+    color: #ABE0FF;
+    font-size: 20px;
+    font-weight: 500;
+    border: none;
+}
+#seconds-value{
+    font-family: "Work Sans", sans-serif;
+    color: #457058;
+    font-weight: 400;
+    width: 230px;
+
+    position:absolute;
+    top: 230px;
+    left: 20px
+}
+
+#time-change-submit{
+    font-family: "Work Sans", sans-serif;
+    background-color: #FFC2E1;
+    color: #2E5266;
+    font-size: 14px;
+    font-weight: 600;
+    border: none;
+    border-radius: 50px;
+    height: 25px;
+
+    position: absolute;
+    top: 230px;
+    left: 270px;
+}
+
+#settings-close{
+    font-family: "Work Sans", sans-serif;
+    color: #FFC2E1;
+    font-size: 40px;
+    font-weight: 900;
+
+    position: absolute;
+    top: 10px;
+    left: 315px;
 }
