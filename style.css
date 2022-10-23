@@ -178,16 +178,50 @@ body{
 
 
 
+/*  *.* NAV ICONS
+    positioning and sizing
+ */
+.nav{
+    border-radius: 50%;
+    position: absolute;
+
+    border-color: #2E5266;
+    border-style: solid;
+    border-width: 3px;
+}
+.home-button{
+    left: 23px;
+    top: 18px;
+    width: 60px;
+    height: 60px;
+}
+.study-button{
+    left: 25px;
+    top: 123px;
+    width: 55px;
+    height: 55px;
+}
+.nom-button{
+    left: 25px;
+    top: 223px;
+    width: 55px;
+    height: 55px;
+}
+.sleep-button{
+    left: 25px;
+    top: 321px;
+    width: 55px;
+    height: 55px;
+
+}
 
 
 
 
 
-
-
-
-
-
+/*  *.* AXOLOTL
+    gif positioning and resizing
+ */
 .axolotl{
     position: absolute;
     left: 219px;

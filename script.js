@@ -5,6 +5,9 @@ let timerOn = false;
 let timeSet;
 let timeLength = 1500;
 
+let modes = ["home", "study", "nom", "sleep"];
+let modeOn = [false, false, false, false]
+
 /*  *.* TIMER FUNCTIONS
     timer set, start and end buttons
 */
@@ -31,14 +34,12 @@ setInterval(function() {
 
 /* variable function to start timer on start .*/
 document.getElementsByClassName("start")[0].addEventListener("click", function(){
-    localStorage.clear();
     timerOn = true;
     timeSet = new Date(new Date().getTime() + timeLength * 1000);
 });
 
 /* variable function to end timer on end .*/
 document.getElementsByClassName("end")[0].addEventListener("click", function(){
-    localStorage.clear();
     timerOn = false;
 
     document.getElementsByClassName("time")[0].innerHTML = milliseconds_toString(timeLength * 1000);
@@ -46,10 +47,27 @@ document.getElementsByClassName("end")[0].addEventListener("click", function(){
 
 
 
-/*  *.* SPACER TITLE
-    gen title
+/*  *.* MODE FUNCTIONS
+    switch mode text and mode axolotl based on button click
 */
-/* indiv title.*/
+
+/* sidebar function add event listeners.*/
+document.getElementsByClassName("home-button")[0].addEventListener("click", function(){
+    //document.getElementsByClassName("axolotl")[0].src = "images/axolotl/home-axolotl.gif";
+    document.getElementsByClassName("mode-text")[0].innerHTML = "welcome back!";
+});
+document.getElementsByClassName("study-button")[0].addEventListener("click", function(){
+    //document.getElementsByClassName("axolotl")[0].src = "images/axolotl/home-axolotl.gif";
+    document.getElementsByClassName("mode-text")[0].innerHTML = "it's time to grind!";
+});
+document.getElementsByClassName("nom-button")[0].addEventListener("click", function(){
+    //document.getElementsByClassName("axolotl")[0].src = "images/axolotl/home-axolotl.gif";
+    document.getElementsByClassName("mode-text")[0].innerHTML = "nom nom!";
+});
+document.getElementsByClassName("sleep-button")[0].addEventListener("click", function(){
+    //document.getElementsByClassName("axolotl")[0].src = "images/axolotl/home-axolotl.gif";
+    document.getElementsByClassName("mode-text")[0].innerHTML = "sleep tight!";
+});
 
 
 /*  *.* SPACER TITLE
