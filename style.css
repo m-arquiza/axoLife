@@ -295,7 +295,16 @@ body{
     font-size: 14px;
     font-weight: 400;
     position:absolute;
-    top: 80px;
+    top: 90px;
+    left: 20px;
+    display:none;
+}
+.error2{
+    color: #D1ECF0;
+    font-size: 14px;
+    font-weight: 400;
+    position:absolute;
+    top: 250px;
     left: 20px;
     display:none;
 }
@@ -384,7 +393,7 @@ body{
     height: 25px;
 }
 
-#minute-label{
+#minutes-label{
     position:absolute;
     top: 162px;
     left:20px;
@@ -395,7 +404,7 @@ body{
     font-weight: 500;
     border: none;
 }
-#minute-value{
+#minutes-value{
     font-family: "Work Sans", sans-serif;
     color: #457058;
     font-weight: 400;

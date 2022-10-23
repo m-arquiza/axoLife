@@ -5,7 +5,6 @@
 let timerOn = false;
 let timeSet;
 let timeLength = 1500;
-let name;
 
 /*  *.* TIMER FUNCTIONS
     timer set, start and end buttons
@@ -26,24 +25,33 @@ setInterval(function() {
             clearInterval();
             document.getElementsByClassName("time")[0].innerHTML = milliseconds_toString(timeLength * 1000);
             timerOn = false;
-            localStorage.clear();
+            localStorage.removeItem("timeSave");
         }
     }
 }, 1000);
 
 /* variable function to start timer on start .*/
 document.getElementsByClassName("start")[0].addEventListener("click", function(){
+    localStorage.removeItem("timeSave");
     timerOn = true;
     timeSet = new Date(new Date().getTime() + timeLength * 1000);
+    localStorage.timeSave = timeSet;
 });
 
 /* variable function to end timer on end .*/
 document.getElementsByClassName("end")[0].addEventListener("click", function(){
     timerOn = false;
-
     document.getElementsByClassName("time")[0].innerHTML = milliseconds_toString(timeLength * 1000);
+    localStorage.removeItem("timeSave");
 });
 
+/* loads timer in when window is reloaded*/
+window.onload = function() {
+    if(localStorage.timeSave != null){
+        timeSet = Date.parse((localStorage.timeSave))
+        timerOn = true;
+    }
+};
 
 
 /*  *.* MODE FUNCTIONS
@@ -73,13 +81,17 @@ document.getElementsByClassName("nap-button")[0].addEventListener("click", funct
     close and open popups, accept form submissions
 */
 /* initial name- popup and set name.*/
+if(localStorage.getItem("name") != null){
+    document.getElementById("initial-popup").style.display = "none";
+    document.getElementsByClassName("hello-text")[0].innerHTML = "hello, " + localStorage.getItem("name") + "!";
+}
 document.getElementById("name-submit").addEventListener("click", function(){
     let checkName = document.getElementById("name-value").value;
     if(!(checkName.length <= 12 && checkName.length > 0)){
         document.getElementsByClassName("initialPop")[0].style.display = "block";
     }else{
-        name = checkName;
-        document.getElementsByClassName("hello-text")[0].innerHTML = "hello, " + name + "!";
+        localStorage.setItem("name", checkName);
+        document.getElementsByClassName("hello-text")[0].innerHTML = "hello, " + localStorage.getItem("name") + "!";
         document.getElementById("initial-popup").style.display = "none";
     }
 });
@@ -91,12 +103,28 @@ document.getElementsByClassName("gear")[0].addEventListener("click", function(){
 
 /* setting- rename popup.*/
 document.getElementById("rename-submit").addEventListener("click", function(){
-    let checkName = document.getElementById("rename-value").value;
-    if(!(checkName.length <= 12 && checkName.length > 0)){
+    let check_name = document.getElementById("rename-value").value;
+    if(!(check_name.length <= 12 && check_name.length > 0)){
         document.getElementsByClassName("settingsPop")[0].style.display = "block";
     }else{
-        name = checkName;
-        document.getElementsByClassName("hello-text")[0].innerHTML = "hello, " + name + "!";
+        localStorage.setItem("name", check_name);
+        document.getElementsByClassName("settingsPop")[0].style.display = "none";
+        document.getElementsByClassName("hello-text")[0].innerHTML = "hello, " + localStorage.getItem("name") + "!";
+    }
+});
+
+/* setting- change timer popup */
+document.getElementById("time-change-submit").addEventListener("click", function(){
+    let check_mins = Number(document.getElementById("minutes-value").value);
+    let check_secs = Number(document.getElementById("seconds-value").value);
+    if(isNaN(check_mins) || isNaN(check_secs)){
+        document.getElementsByClassName("error2")[0].style.display = "block";
+    }else{
+        console.log(check_mins);
+        console.log(check_secs);
+        timeLength = (check_mins * 60 + check_secs);
+        document.getElementsByClassName("time")[0].innerHTML = milliseconds_toString(timeLength * 1000);
+        document.getElementsByClassName("error2")[0].style.display = "none";
     }
 });
 
