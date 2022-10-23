@@ -1,7 +1,6 @@
 /*  *.* BODY AND HTML
     size, colors, font
 */
-
 body{
     width: 700px;
     height: 500px;
@@ -18,6 +17,7 @@ body{
 /*  *.* BACKGROUND SHAPES
     buttons and text backings/style
 */
+/* general shape rounding*/
 .background-shape{
     border-radius: 50px;
 }
@@ -64,7 +64,12 @@ body{
     height: 32px;
 }
 
-/* bubble style and positioning */
+
+
+/*  *.* BUBBLE BACKGROUND
+    bubble style and positioninG
+*/
+/* style */
 .bubble{
     border-color: #D1ECF0;
     border-style: solid;
@@ -75,6 +80,7 @@ body{
     z-index:1000;
 }
 
+/* left bubbles */
 .L1{
     left: 109px;
     top: 103px;
@@ -99,7 +105,7 @@ body{
     width: 63px;
     height: 63px;
 }
-
+/* right bubbles */
 .R1{
     left: 443px;
     top: 71px;
@@ -163,6 +169,7 @@ body{
     width: 371px;
     height: 55px;
 }
+
 .mode-text{
     font-family: "Work Sans", sans-serif;
     color: #2E5266;
@@ -175,6 +182,20 @@ body{
     top: 406px;
     width: 317px;
     height: 55px;
+}
+
+/* motivational quotes*/
+.motivation{
+    font-family: "Work Sans", sans-serif;
+    color: #2E5266;
+    font-size: 17px;
+    font-weight: 400;
+    font-style: italic;
+    text-align: center;
+
+    position: absolute;
+    bottom: 5px;
+    width: 700px;
 }
 
 
@@ -234,7 +255,7 @@ body{
 /*  *.* POPUPS
     initial name and settings
  */
-
+/* initial popup with name input styling */
 #initial-popup{
     background-color: #78CAD6;
     cursor:default;
@@ -290,6 +311,7 @@ body{
     height: 25px;
 }
 
+/* error styles */
 .error{
     color: #D1ECF0;
     font-size: 14px;
@@ -309,6 +331,7 @@ body{
     display:none;
 }
 
+/* open and close settings styling */
 .gear{
     position: absolute;
     top: 17px;
@@ -316,7 +339,18 @@ body{
     width: 60px;
     height: 60px;
 }
+#settings-close{
+    font-family: "Work Sans", sans-serif;
+    color: #FFC2E1;
+    font-size: 40px;
+    font-weight: 900;
 
+    position: absolute;
+    top: 10px;
+    left: 315px;
+}
+
+/* settings popup with name input styling */
 #settings-popup{
     background-color: #78CAD6;
     cursor:default;
@@ -339,7 +373,6 @@ body{
     height: 300px;
     border-radius: 50px;
 }
-
 .settings-title{
     font-family: "Work Sans", sans-serif;
     color: #D1ECF0;
@@ -347,19 +380,13 @@ body{
     font-weight: 600;
     border: none;
 }
+
+/* rename form styles */
 .rename{
     position: absolute;
     top: 0;
     left: 20px;
 }
-
-.time-change{
-    position: absolute;
-    top: 110px;
-    left: 20px;
-}
-
-
 #rename-label{
     position:absolute;
     top: 52px;
@@ -391,6 +418,13 @@ body{
     border: none;
     border-radius: 50px;
     height: 25px;
+}
+
+/* time change form styles */
+.time-change{
+    position: absolute;
+    top: 110px;
+    left: 20px;
 }
 
 #minutes-label{
@@ -452,13 +486,3 @@ body{
     left: 270px;
 }
 
-#settings-close{
-    font-family: "Work Sans", sans-serif;
-    color: #FFC2E1;
-    font-size: 40px;
-    font-weight: 900;
-
-    position: absolute;
-    top: 10px;
-    left: 315px;
-}
