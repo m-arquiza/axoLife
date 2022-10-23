@@ -234,12 +234,13 @@ body{
 /*  *.* POPUPS
     initial name and settings
  */
-.popup{
+#initial-popup{
     background-color: #78CAD6;
     cursor:default;
-    display:block;
     vertical-align: middle;
     position:absolute;
+    display:block;
+
     top: 0;
     left: 0;
     bottom: 0;
@@ -299,7 +300,7 @@ body{
     display:none;
 }
 
-.settings{
+.gear{
     position: absolute;
     top: 17px;
     left: 650px;
@@ -307,13 +308,26 @@ body{
     height: 60px;
 }
 
+#settings-popup{
+    background-color: #78CAD6;
+    cursor:default;
+    vertical-align: middle;
+    position:absolute;
+    display:none;
+
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index:500;
+}
 #settings-form{
     position:absolute;
     background-color: #2E5266;
     top: 100px;
     left: 175px;
     width: 361px;
-    height: 150px;
+    height: 300px;
     border-radius: 50px;
 }
 

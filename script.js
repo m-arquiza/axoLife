@@ -80,11 +80,16 @@ document.getElementById("name-submit").addEventListener("click", function(){
     }else{
         name = checkName;
         document.getElementsByClassName("hello-text")[0].innerHTML = "hello, " + name + " :)";
-        document.getElementsByClassName("initial")[0].style.display = "none";
+        document.getElementById("initial-popup").style.display = "none";
     }
 });
 
-/* initial name popup.*//*
+/* open popup on gear click.*/
+document.getElementsByClassName("gear")[0].addEventListener("click", function(){
+    document.getElementById("settings-popup").style.display = "block";
+});
+
+/* setting popup.*/
 document.getElementById("rename-submit").addEventListener("click", function(){
     let checkName = document.getElementById("name-value").value;
     if(!(checkName.length <= 12 && checkName.length > 0)){
@@ -93,7 +98,7 @@ document.getElementById("rename-submit").addEventListener("click", function(){
         name = checkName;
         document.getElementsByClassName("hello-text")[0].innerHTML = "hello, " + name + " :)";
     }
-});*/
+});
 
 
 /*  *.* HELPER FUNCTIONS
