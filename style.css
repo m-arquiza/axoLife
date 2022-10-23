@@ -208,7 +208,7 @@ body{
     width: 55px;
     height: 55px;
 }
-.sleep-button{
+.nap-button{
     left: 25px;
     top: 321px;
     width: 55px;
@@ -234,7 +234,7 @@ body{
 /*  *.* POPUPS
     initial name and settings
  */
-#initial-popup{
+.popup{
     background-color: #78CAD6;
     cursor:default;
     display:block;
@@ -289,7 +289,7 @@ body{
     height: 25px;
 }
 
-#error{
+.error{
     color: #D1ECF0;
     font-size: 14px;
     font-weight: 400;
@@ -297,4 +297,57 @@ body{
     top: 50px;
     left: 20px;
     display:none;
+}
+
+.settings{
+    position: absolute;
+    top: 17px;
+    left: 650px;
+    width: 60px;
+    height: 60px;
+}
+
+#settings-form{
+    position:absolute;
+    background-color: #2E5266;
+    top: 100px;
+    left: 175px;
+    width: 361px;
+    height: 150px;
+    border-radius: 50px;
+}
+
+#rename-label{
+    position:relative;
+    top: 10px;
+    left:20px;
+
+    font-family: "Work Sans", sans-serif;
+    color: #D1ECF0;
+    font-size: 25px;
+    font-weight: 500;
+    border: none;
+}
+#rename-submit-container{
+    position:absolute;
+    top: 50px;
+    left: 20px
+}
+
+#rename-value{
+    font-family: "Work Sans", sans-serif;
+    color: #457058;
+    font-weight: 400;
+    width: 230px;
+}
+
+#rename-submit{
+    font-family: "Work Sans", sans-serif;
+    background-color: #FFC2E1;
+    color: #2E5266;
+    font-size: 14px;
+    font-weight: 600;
+    border: none;
+    border-radius: 50px;
+    height: 25px;
 }

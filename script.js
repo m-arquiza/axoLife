@@ -7,9 +7,6 @@ let timeSet;
 let timeLength = 1500;
 let name;
 
-let modes = ["home", "study", "nom", "sleep"];
-let modeOn = [false, false, false, false]
-
 /*  *.* TIMER FUNCTIONS
     timer set, start and end buttons
 */
@@ -66,8 +63,8 @@ document.getElementsByClassName("nom-button")[0].addEventListener("click", funct
     //document.getElementsByClassName("axolotl")[0].src = "images/axolotl/nom-axolotl.gif";
     document.getElementsByClassName("mode-text")[0].innerHTML = "nom nom!";
 });
-document.getElementsByClassName("sleep-button")[0].addEventListener("click", function(){
-    //document.getElementsByClassName("axolotl")[0].src = "images/axolotl/sleep-axolotl.gif";
+document.getElementsByClassName("nap-button")[0].addEventListener("click", function(){
+    //document.getElementsByClassName("axolotl")[0].src = "images/axolotl/nap-axolotl.gif";
     document.getElementsByClassName("mode-text")[0].innerHTML = "sleep tight!";
 });
 
@@ -78,16 +75,25 @@ document.getElementsByClassName("sleep-button")[0].addEventListener("click", fun
 /* initial name popup.*/
 document.getElementById("name-submit").addEventListener("click", function(){
     let checkName = document.getElementById("name-value").value;
-    console.log("clicked");
     if(!(checkName.length <= 12 && checkName.length > 0)){
-        document.getElementById("error").style.display = "block";
-        console.log("invalid")
+        document.getElementsByClassName("initialPop")[0].style.display = "block";
     }else{
         name = checkName;
         document.getElementsByClassName("hello-text")[0].innerHTML = "hello, " + name + " :)";
-        document.getElementById("initial-popup").style.display = "none";
+        document.getElementsByClassName("initial")[0].style.display = "none";
     }
 });
+
+/* initial name popup.*//*
+document.getElementById("rename-submit").addEventListener("click", function(){
+    let checkName = document.getElementById("name-value").value;
+    if(!(checkName.length <= 12 && checkName.length > 0)){
+        document.getElementsByClassName("settingsPop")[0].style.display = "block";
+    }else{
+        name = checkName;
+        document.getElementsByClassName("hello-text")[0].innerHTML = "hello, " + name + " :)";
+    }
+});*/
 
 
 /*  *.* HELPER FUNCTIONS
