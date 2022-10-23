@@ -2,14 +2,31 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Axo-Link</title>
+    <title>axoLife</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans" rel="stylesheet">
 </head>
 <body>
-    <div class="background-shape hello"></div>
+    <div id="hello">
+        <div class="background-shape hello"></div>
+        <h1 class="hello-text"></h1>
+    </div>
 
-    <div id="timer">
+    <div id="bubbles">
+        <div class="bubble L1"></div>
+        <div class="bubble L2"></div>
+        <div class="bubble L3"></div>
+        <div class="bubble L4"></div>
+
+        <div class="bubble R1"></div>
+        <div class="bubble R2"></div>
+        <div class="bubble R3"></div>
+        <div class="bubble R4"></div>
+        <div class="bubble R5"></div>
+
+    </div>
+
+    <div id="timer-display">
         <div id="time-display">25:00</div>
         <div id="button-display">
             <button class="background-shape timer-button start">start</button>
@@ -17,7 +34,11 @@
         </div>
     </div>
 
-    <div class="background-shape mode"></div>
+    <div id="mode">
+        <div class="background-shape mode"></div>
+        <h2 class="mode-text"></h2>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>

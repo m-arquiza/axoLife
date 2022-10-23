@@ -1,5 +1,5 @@
 {
-  "name": "Axo-Life",
+  "name": "axoLife",
   "description": "Make an axolotl friend for life!",
   "version": "1.0",
   "author": "Michelle Arquiza",
@@ -14,6 +14,6 @@
   ],
   "action":{
     "default_popup": "index.html",
-    "default_title": "axo-life"
+    "default_title": "axoLife"
   }
 }
