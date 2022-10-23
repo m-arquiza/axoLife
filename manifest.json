@@ -5,9 +5,9 @@
   "author": "Michelle Arquiza",
   "manifest_version": 3,
   "icons": {
-    "16": "/images/axo-16.png",
-    "48": "/images/axo-48.png",
-    "128": "/images/axo-128.png"
+    "16": "/images/icons/axo-16.png",
+    "48": "/images/icons/axo-48.png",
+    "128": "/images/icons/axo-128.png"
   },
   "permissions": [
     "storage"
