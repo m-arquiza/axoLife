@@ -74,6 +74,8 @@ document.getElementsByClassName("nap-button")[0].addEventListener("click", funct
     localStorage.setItem("mode", "nap");
 });
 
+/* on first initialization, sets mode in storage to home*/
+localStorage.setItem("mode", "home");
 
 /*  *.* POPUP FUNCTIONS
     close and open popups, accept form submissions
@@ -130,6 +132,7 @@ document.getElementById("time-change-submit").addEventListener("click", function
 document.getElementById("settings-close").addEventListener("click", function(){
     document.getElementById("settings-popup").style.display = "none";
 });
+
 
 
 /*  *.* HELPER FUNCTIONS
