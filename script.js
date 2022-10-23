@@ -1,9 +1,11 @@
 /*  *.* GLOBAL VARS
-    timers: is timer on, time timer is set to
+    timers: is timer on, time timer is set to, time length
+    personal: name
 */
 let timerOn = false;
 let timeSet;
 let timeLength = 1500;
+let name;
 
 let modes = ["home", "study", "nom", "sleep"];
 let modeOn = [false, false, false, false]
@@ -53,33 +55,46 @@ document.getElementsByClassName("end")[0].addEventListener("click", function(){
 
 /* sidebar function add event listeners.*/
 document.getElementsByClassName("home-button")[0].addEventListener("click", function(){
-    //document.getElementsByClassName("axolotl")[0].src = "images/axolotl/home-axolotl.gif";
+    document.getElementsByClassName("axolotl")[0].src = "images/axolotl/home-axolotl.gif";
     document.getElementsByClassName("mode-text")[0].innerHTML = "welcome back!";
 });
 document.getElementsByClassName("study-button")[0].addEventListener("click", function(){
-    //document.getElementsByClassName("axolotl")[0].src = "images/axolotl/home-axolotl.gif";
+    document.getElementsByClassName("axolotl")[0].src = "images/axolotl/study-axolotl.gif";
     document.getElementsByClassName("mode-text")[0].innerHTML = "it's time to grind!";
 });
 document.getElementsByClassName("nom-button")[0].addEventListener("click", function(){
-    //document.getElementsByClassName("axolotl")[0].src = "images/axolotl/home-axolotl.gif";
+    //document.getElementsByClassName("axolotl")[0].src = "images/axolotl/nom-axolotl.gif";
     document.getElementsByClassName("mode-text")[0].innerHTML = "nom nom!";
 });
 document.getElementsByClassName("sleep-button")[0].addEventListener("click", function(){
-    //document.getElementsByClassName("axolotl")[0].src = "images/axolotl/home-axolotl.gif";
+    //document.getElementsByClassName("axolotl")[0].src = "images/axolotl/sleep-axolotl.gif";
     document.getElementsByClassName("mode-text")[0].innerHTML = "sleep tight!";
 });
 
 
-/*  *.* SPACER TITLE
-    gen title
+/*  *.* POPUP FUNCTIONS
+    close and open popups, accept form submissions
 */
-/* indiv title.*/
+/* initial name popup.*/
+document.getElementById("name-submit").addEventListener("click", function(){
+    let checkName = document.getElementById("name-value").value;
+    console.log("clicked");
+    if(!(checkName.length <= 12 && checkName.length > 0)){
+        document.getElementById("error").style.display = "block";
+        console.log("invalid")
+    }else{
+        name = checkName;
+        document.getElementsByClassName("hello-text")[0].innerHTML = "hello, " + name + " :)";
+        document.getElementById("initial-popup").style.display = "none";
+    }
+});
 
 
 /*  *.* HELPER FUNCTIONS
-    time conversion
+    time conversion, valid name input
 */
-/* convert milliseconds to mins and seconds as a formatted string.*/
+/* convert milliseconds to mins and seconds as a formatted string */
 function milliseconds_toString(time){
-    return (Math.floor((time/1000)/60) + ":" + Math.floor((time/1000)%60).toLocaleString(undefined,{minimumIntegerDigits: 2}))
+    return (Math.floor((time/1000)/60) + ":"
+        + Math.floor((time/1000)%60).toLocaleString(undefined,{minimumIntegerDigits: 2}))
 }

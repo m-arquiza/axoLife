@@ -72,6 +72,7 @@ body{
     filter:blur(2px);
     border-radius: 50%;
     position: absolute;
+    z-index:1000;
 }
 
 .L1{
@@ -217,8 +218,6 @@ body{
 
 
 
-
-
 /*  *.* AXOLOTL
     gif positioning and resizing
  */
@@ -228,4 +227,74 @@ body{
     top: 152px;
     width: 262px;
     height: 262px;
+}
+
+
+
+/*  *.* POPUPS
+    initial name and settings
+ */
+#initial-popup{
+    background-color: #78CAD6;
+    cursor:default;
+    display:block;
+    vertical-align: middle;
+    position:absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index:500;
+}
+#name-form{
+    position:absolute;
+    background-color: #2E5266;
+    top: 190px;
+    left: 175px;
+    width: 361px;
+    height: 150px;
+    border-radius: 50px;
+}
+#name-label{
+    position:relative;
+    top: 10px;
+    left:20px;
+
+    font-family: "Work Sans", sans-serif;
+    color: #D1ECF0;
+    font-size: 25px;
+    font-weight: 500;
+    border: none;
+}
+#name-submit-container{
+    position:absolute;
+    top: 50px;
+    left: 20px
+}
+#name-value{
+    font-family: "Work Sans", sans-serif;
+    color: #457058;
+    font-weight: 400;
+    width: 230px;
+}
+
+#name-submit{
+    font-family: "Work Sans", sans-serif;
+    background-color: #FFC2E1;
+    color: #2E5266;
+    font-size: 14px;
+    font-weight: 600;
+    border: none;
+    border-radius: 50px;
+    height: 25px;
+}
+
+#error{
+    color: #D1ECF0;
+    font-size: 14px;
+    font-weight: 400;
+    position:relative;
+    top: 50px;
+    left: 20px;
+    display:none;
 }
