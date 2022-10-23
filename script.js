@@ -5,6 +5,7 @@
 let timerOn = false;
 let timeSet;
 let timeLength = 1500;
+let mode = ["home", "study", "nom", "nap"];
 
 /*  *.* TIMER FUNCTIONS
     timer set, start and end buttons
@@ -45,13 +46,6 @@ document.getElementsByClassName("end")[0].addEventListener("click", function(){
     localStorage.removeItem("timeSave");
 });
 
-/* loads timer in when window is reloaded*/
-window.onload = function() {
-    if(localStorage.timeSave != null){
-        timeSet = Date.parse((localStorage.timeSave))
-        timerOn = true;
-    }
-};
 
 
 /*  *.* MODE FUNCTIONS
@@ -62,18 +56,22 @@ window.onload = function() {
 document.getElementsByClassName("home-button")[0].addEventListener("click", function(){
     document.getElementsByClassName("axolotl")[0].src = "images/axolotl/home-axolotl.gif";
     document.getElementsByClassName("mode-text")[0].innerHTML = "welcome back~";
+    localStorage.setItem("mode", "home");
 });
 document.getElementsByClassName("study-button")[0].addEventListener("click", function(){
     document.getElementsByClassName("axolotl")[0].src = "images/axolotl/study-axolotl.gif";
     document.getElementsByClassName("mode-text")[0].innerHTML = "it's time to grind~";
+    localStorage.setItem("mode", "study");
 });
 document.getElementsByClassName("nom-button")[0].addEventListener("click", function(){
-    //document.getElementsByClassName("axolotl")[0].src = "images/axolotl/nom-axolotl.gif";
+    document.getElementsByClassName("axolotl")[0].src = "images/axolotl/nom-axolotl.gif";
     document.getElementsByClassName("mode-text")[0].innerHTML = "nom nom~";
+    localStorage.setItem("mode", "nom");
 });
 document.getElementsByClassName("nap-button")[0].addEventListener("click", function(){
     document.getElementsByClassName("axolotl")[0].src = "images/axolotl/nap-axolotl.gif";
     document.getElementsByClassName("mode-text")[0].innerHTML = "sleep tight~";
+    localStorage.setItem("mode", "nap");
 });
 
 
@@ -128,7 +126,7 @@ document.getElementById("time-change-submit").addEventListener("click", function
     }
 });
 
-/* close popup button*/
+/* setting- close popup */
 document.getElementById("settings-close").addEventListener("click", function(){
     document.getElementById("settings-popup").style.display = "none";
 });
@@ -142,3 +140,15 @@ function milliseconds_toString(time){
     return (Math.floor((time/1000)/60) + ":"
         + Math.floor((time/1000)%60).toLocaleString(undefined,{minimumIntegerDigits: 2}))
 }
+
+/* loads timer and image in when window is reloaded*/
+window.onload = function() {
+    if(localStorage.timeSave != null){
+        timeSet = Date.parse((localStorage.timeSave))
+        timerOn = true;
+    }
+    if(localStorage.getItem("mode") != null){
+        document.getElementsByClassName("axolotl")[0].src = ("images/axolotl/"
+            + localStorage.getItem("mode") + "-axolotl.gif");
+    }
+};
