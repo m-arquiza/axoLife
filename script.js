@@ -24,7 +24,7 @@ setInterval(function() {
         // end timer
         if (diff < 0) {
             clearInterval();
-            document.getElementsByClassName("time")[0].innerHTML = milliseconds_toString(timeLength * 1000);
+            document.getElementsByClassName("time")[0].innerHTML = "timer ended " + milliseconds_toTime(now);
             timerOn = false;
             localStorage.removeItem("timeSave");
         }
@@ -142,6 +142,9 @@ document.getElementById("settings-close").addEventListener("click", function(){
 function milliseconds_toString(time){
     return (Math.floor((time/1000)/60) + ":"
         + Math.floor((time/1000)%60).toLocaleString(undefined,{minimumIntegerDigits: 2}))
+}
+function milliseconds_toTime(time){
+    return new Date(time).toLocaleTimeString("en-US");
 }
 
 /* loads timer and image in when window is reloaded*/

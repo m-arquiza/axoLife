@@ -144,10 +144,10 @@ body{
  */
 .time{
     position: absolute;
-    left: 274px;
+    margin: 0 auto;
     top: 71px;
-    width: 152px;
     height: 55px;
+    width:700px;
 
     font-family: "Work Sans", sans-serif;
     color: #2E5266;
